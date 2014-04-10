@@ -24,8 +24,7 @@ public class RhodeCode extends GitRepositoryBrowser {
 
     @DataBoundConstructor
     public RhodeCode(String repoUrl) {
-        super(repoUrl);
-        this.normalizeUrl = true;
+        super(repoUrl, true);
     }
 
     private QueryBuilder param(URL url) {

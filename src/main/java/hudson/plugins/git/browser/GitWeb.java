@@ -24,8 +24,7 @@ public class GitWeb extends GitRepositoryBrowser {
 
     @DataBoundConstructor
     public GitWeb(String repoUrl) {
-        super(repoUrl);
-        this.normalizeUrl = false;
+        super(repoUrl, false);
     }
 
     @Override

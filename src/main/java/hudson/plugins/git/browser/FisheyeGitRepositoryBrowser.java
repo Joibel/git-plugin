@@ -26,8 +26,7 @@ public class FisheyeGitRepositoryBrowser extends GitRepositoryBrowser {
 
 	@DataBoundConstructor
     public FisheyeGitRepositoryBrowser(String repoUrl) {
-        super(repoUrl);
-        this.normalizeUrl = true;
+        super(repoUrl, true);
     }
 
 	@Override

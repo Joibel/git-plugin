@@ -14,14 +14,11 @@ import java.net.URL;
 public abstract class GitRepositoryBrowser extends RepositoryBrowser<GitChangeSet> {
 
     private /* mostly final */ String url;
-    protected boolean normalizeUrl;
+    transient private final boolean normalizeUrl;
 
-    @Deprecated
-    protected GitRepositoryBrowser() {
-    }
-
-    protected GitRepositoryBrowser(String repourl) {
+    protected GitRepositoryBrowser(String repourl, boolean normalize) {
         this.url = repourl;
+        this.normalizeUrl = normalize;
     }
 
     public final String getRepoUrl() {
